@@ -1,16 +1,16 @@
 /**
  * 92733274-0d57-4966-aefb-d85c5c585f75 API CAT KEY
  */
-const cat = document.getElementById("cat");
-const dog = document.getElementById("dog");
+const cat     = document.getElementById("cat");
+const dog     = document.getElementById("dog");
 
-const audio = document.querySelector("audio");
-audio.volume = 0.2
+const audio   = document.querySelector("audio");
+audio.volume  = 0.2
 
-const catImg = document.createElement("img");
+const catImg  = document.createElement("img");
 catImg.classList.add("images");
 
-const dogImg = document.createElement("img");
+const dogImg  = document.createElement("img");
 dogImg.classList.add("images");
 
 cat.appendChild(catImg);
@@ -18,8 +18,8 @@ dog.appendChild(dogImg);
 
 
 async function newCat() {
-  const catto = await fetch("https://api.thecatapi.com/v1/images/search")
-    .then((res) => res.json())
+  const catto    = await fetch("https://api.thecatapi.com/v1/images/search")
+    .then((res)  => res.json())
     .then((data) => catImg.src = `${data[0].url}`)
     .catch((err) => console.log("Failed to load an image"));
     return catto
@@ -27,8 +27,8 @@ async function newCat() {
 newCat();
 
 async function newDog() {
-  const doggo = await fetch("https://api.thedogapi.com/v1/images/search")
-  .then((res) => res.json())
+  const doggo  = await fetch("https://api.thedogapi.com/v1/images/search")
+  .then((res)  => res.json())
   .then((data) => dogImg.src = `${data[0].url}`)
   .catch((err) => console.log("Failed to load an image"));
   return doggo

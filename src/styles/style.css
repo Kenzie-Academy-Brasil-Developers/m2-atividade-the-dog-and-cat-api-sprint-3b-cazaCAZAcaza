@@ -68,10 +68,58 @@ img {
 	border-radius: 50%;
 }
 
+.buttons:active {
+	box-shadow: 0px 0px 25px 10px rgba(128,128,128,0.69);
+	-webkit-box-shadow: 0px 0px 25px 10px rgba(128,128,128,0.69);
+	-moz-box-shadow: 0px 0px 25px 10px rgba(128,128,128,0.69);
+	outline: none;
+	border: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
 svg {
 	width: 3rem;
 }
 
-/* audio {
-	display: none;
+audio {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+
+@media all and (max-width: 600px) {
+	.main {
+	margin: 1rem auto;
+	gap: .02rem;
+	}
+	.card {
+		width: 10rem;
+		height: 28rem;
+		background-color: transparent;
+		display: grid;
+		align-items: end;
+		justify-items: center;
+	}
+	img {
+		border-radius: 20px;
+		height: 10rem;
+		width: 100%;
+		border: none;
+	}
+	audio {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+	}
+	.buttons {
+		height: 5rem;
+		width: 50%;
+		cursor: pointer;
+		border: none;
+		border-radius: 50%;
+	}
+}
+
+/* @media (orientation: landscape) {
+	
 } */
